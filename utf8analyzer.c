@@ -112,19 +112,19 @@ void function6(char str[]){
         }
         puts("\n");
 }
-void function7(char str[]) {
+
+void function_7(char str[]) {
         int end = 0;
         for (int i = 0; str[end]  != '\0' && i < 6; i++) {
-                unsigned char c = (unsigned char)str[i];
                 int len;
-
-                if ((c & 0x80) == 0x00){
+		
+                if ((str[end] & 0b10000000) == 0b10000000){
                         len = 1;
                 }
-                else if ((c & 0xE0) == 0xC0){
+                else if ((str[end] & 0b11100000) == 0b11000000){
                         len = 2;
                 }
-                else if ((c & 0xF0) == 0xE0) {
+                else if ((str[end] & 0b11110000) == 0b11100000) {
                         len = 3;
                 }
                 else {
@@ -150,6 +150,7 @@ int main(int argc, char *argv[]) {
 
     function_5(buffer);
     function_6(buffer);
+    function_7(buffer); 
 }
 
  
