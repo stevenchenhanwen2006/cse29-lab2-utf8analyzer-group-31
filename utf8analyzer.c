@@ -144,6 +144,10 @@ int main(int argc, char *argv[]) {
 	
     char buffer[10];
     fgets(buffer,10,stdin);
+	printf("Valid ASCII" %s, function1(buffer)?"true":"false);
+	function2(buffer);
+	printf("UPPERCASED ASCII": %s", buffer);
+	print("lenght in bytes": %d", function3(buffer));
     int result4 = function_4(buffer);
     printf("Number of codepoints: %d",result4);
     puts("\n");
